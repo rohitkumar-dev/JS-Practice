@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>    
+<body>
+    <h2 id="head">Web Development</h2>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+
+<script>
+    const sayHello = function(str){
+        console.log(str)        
+    }
+    let inter;
+    document.querySelector("#start").addEventListener("click", function(){
+        console.log("Started")
+        inter = setInterval(sayHello, 2000, "Jai Shree Ram")
+    })
+    document.querySelector("#stop").addEventListener("click", function(){
+        console.log("Stopped")
+        clearInterval(inter)
+    })
+
+</script>
+</body>
+</html>

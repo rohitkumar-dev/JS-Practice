@@ -1,0 +1,105 @@
+*{
+  box-sizing: border-box;
+}
+body{
+  font-family: Arial;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.outer-box{
+  border: solid 3px blue;
+  border-radius: 10px 10px 0 0;
+  margin: auto;
+  width: 350px;
+  height: 150px;
+  background-color: #e4e2e2;
+}
+.inner-head{
+  background-color: blue;
+  height: 30px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  
+  background: linear-gradient(to bottom, blue, rgb(67, 67, 253));
+}
+.inner-head p{
+    margin: 0;
+    padding: 5px 5px;
+    
+}
+.inner-head span{
+    cursor: pointer;
+}
+.inner-head span{
+    margin: 5px 5px;
+    border: solid white 2px;
+    border-radius: 20%;
+    padding: 0 4px;
+    background-color: red;
+    font-weight: 600;
+}
+.inner-body{
+    display: flex;
+}
+#icon{
+    /* height: 40px;
+    width: 40px; */
+    font-size: 40px;
+    margin: 10px 20px 20px 20px;
+    filter: drop-shadow(5px 3px 2px #000000d4);
+}
+.body-right{
+    color: #303030;
+    font-size: 14px;
+}
+.body-btn{
+    margin-top: 25px;
+    margin-left: 20px;
+    display: flex;
+    gap: 20px;
+}
+.body-btn button{
+    border: 1px dotted black;
+    border-radius: 3px;
+    outline: 2px solid blue;
+    outline-offset: 1px;
+    color: #303030;
+    width: 60px;
+}
+#reset{
+    height: 35px;
+    border-radius: 10px;
+    background: linear-gradient(to bottom, blue, rgb(45, 45, 254));
+    color: white;
+    border: none;
+    outline: none;
+    padding: 0px 10px;
+    font-weight: 600;
+    display: none;
+}
+
+
+.heart {
+  position: fixed;
+  bottom: 50px;
+  left: 50%;
+  font-size: 40px;
+  animation: floatUp 1.5s ease-out forwards;
+  pointer-events: none;
+  z-index: 1000;
+  transform: translateX(-50%);
+}
+
+@keyframes floatUp {
+  0% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-150px);
+  }
+}

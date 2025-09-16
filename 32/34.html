@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="color:white; background-color: #313131;">
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+    // add element
+    function addlanguage(lang){
+        const li = document.createElement("li")
+        li.innerHTML = lang
+        document.querySelector(".language").appendChild(li)
+    }
+    addlanguage("Java")
+    addlanguage("CPP")
+
+    function optimal(lang){
+        const li = document.createElement("li")
+        li.appendChild(document.createTextNode(lang))
+        document.querySelector(".language").appendChild(li)
+    }
+    optimal("Ruby")
+
+    //edit element
+    const second_lang = document.querySelector("li:nth-child(2)")
+    second_lang.innerHTML = "Mojo"
+    console.log(second_lang);
+    const new_li = document.createElement("li")
+    new_li.textContent = "Mojo_2"
+    second_lang.replaceWith(new_li)
+
+    //remove
+    const last = document.querySelector("li:last-child")
+    last.remove()
+    
+</script>
+</html>
+
+
+<!-- php,js,node,mern, -->

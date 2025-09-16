@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color:#313131; color: white;">
+    <button id="orange">Orange</button>
+    <button id="green">Green</button>
+
+<script>
+    // let outer_name = "Mohan"
+    // function outer(){
+    //     let in_name = "Krishna"
+    //     console.log(outer_name)      
+    //     function inin(){
+    //         console.log("inin: ",in_name)    
+    //         function ininin(){
+    //             console.log(in_name)                
+    //         }     
+    //         ininin()   
+    //     } 
+    //     inin()
+
+    // }
+    // outer()
+    //console.log(in_name);
+
+    // document.querySelector("#orange").onclick = function(){
+    //     document.body.style.backgroundColor = "orange"
+    // }
+    // document.querySelector("#green").onclick = function(){
+    //     document.body.style.backgroundColor = "green"
+    // }
+    
+    function clickHandle(color){
+        //document.body.style.backgroundColor = color
+        return function(){
+            document.body.style.backgroundColor = color
+        }
+    }
+    document.querySelector("#green").onclick = clickHandle("green")
+    document.querySelector("#orange").onclick = clickHandle("orange")
+
+    
+</script>
+</body>
+</html>
+

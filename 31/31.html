@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="31.css">
+</head>
+<body>
+  <div class="outer-box">
+    <div class="inner-head">
+      <p>Windows Internet Explorer</p>
+      <span id="close" onclick="closee()">X</span>
+    </div>
+    <div class="inner-body">
+        <!-- <img id="icon" src="./crisis.png" alt=""> -->
+         <span id="icon">⚠️</span>
+        <div class="body-right">
+            <p>Something went wrong! Do you want to continue?</p>
+            <div class="body-btn">
+                <button onclick="showHeart()">Agree</button>
+                <button onclick="closee()">Cancel</button>
+            </div>
+        </div>
+    </div>
+  </div>
+  <button id="reset" onclick="reset()">Dobara dekhna h?</button>
+
+<script>
+    function closee(){
+        document.querySelector(".outer-box").style.display = "none"
+        document.querySelector("#reset").style.display = "block"
+    }
+    function reset(){
+        document.querySelector(".outer-box").style.display = "block"
+        document.querySelector("#reset").style.display = "none"
+    }
+
+    function showHeart() {
+        const heart = document.createElement("div");
+        heart.className = "heart";
+        heart.textContent = "❤️";
+        document.body.appendChild(heart);
+        setTimeout(() => {
+            heart.remove();
+        }, 1000);
+}
+</script>
+</body>
+</html>

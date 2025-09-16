@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            background-color: #313131;
+            color: white;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .area{
+            border: 1px solid white;
+            border-radius: 10px;
+        }
+        .banner{
+            height: 40px;
+            background: orangered;
+            border-radius: 10px;
+        }
+        .time{
+            font-size: 35px;
+            text-align: center;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <div class="area">
+        <h2 style="text-align: center;">Current Time</h2>
+        <div class="banner">
+            <p class="time"></p>
+        </div>
+    </div>
+</body>
+<script>
+    let t_ele = document.querySelector(".time")
+    t_ele.innerText = new Date().toLocaleTimeString()    
+    setInterval(()=>{
+        t_ele.innerText = new Date().toLocaleTimeString()
+    },1000)
+</script>
+</html>

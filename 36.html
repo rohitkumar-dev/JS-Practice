@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #313131; color: white;">
+    <img id="poster" style="width: 200px; height: 200px" src="https://images.pexels.com/photos/943096/pexels-photo-943096.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
+    <a id="link" href="www.google.com">Link</a>
+
+    <div class="cont" style="width: 400px;"><img src="" alt="">
+        <img style="width: 400px;" src="https://images.pexels.com/photos/943096/pexels-photo-943096.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
+        <img style="width: 400px;" src="https://images.pexels.com/photos/943096/pexels-photo-943096.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
+        <img style="width: 400px;" src="https://images.pexels.com/photos/943096/pexels-photo-943096.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
+        <img style="width: 400px;" src="https://images.pexels.com/photos/943096/pexels-photo-943096.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
+    </div>
+<script>
+    // events
+    // type, timestamp, defaultPrevent
+    // target, toElement, srcElement, currentTarget
+    // clientX, clientY, screenX, screenY
+    // altkey, ctrlkey, shiftkey, keycode
+
+    const poster = document.getElementById("poster")
+    
+    poster.addEventListener("click",(e)=>{
+        console.log(e);
+        alert("This is poster")
+        e.stopPropagation()
+    },false) //false is for propogation (means sequentially clicking parent-child-child)
+
+    const link = document.getElementById("link")
+    link.addEventListener("click",(e)=>{
+        e.preventDefault()
+    })
+
+    const cont = document.querySelector(".cont")
+    console.log(cont);
+    cont.addEventListener("click",(e)=>{
+        console.log(e.target.parentNode);
+        if(e.target.tagName==="IMG"){
+            e.target.remove()
+        }
+        
+    })
+
+</script>
+</body>
+</html>

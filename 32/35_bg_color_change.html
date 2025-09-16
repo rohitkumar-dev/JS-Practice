@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #313131;
+        }
+        .container{
+            width: 220px;
+            margin: auto;
+            border: 2px solid white;
+        }
+        .box{
+            display: inline-block;
+            height: 50px;
+            width: 50px;
+            border: 1px solid white;
+        }
+        input{
+            width: 220px;
+            height: 50px;
+        }
+        #grey {
+            background: grey;
+        }
+
+        #green {
+            background: green;
+        }
+        #blue {
+            background: blue;
+        }
+        #yellow {
+            background: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <span class="box" id="grey"></span>
+        <span class="box" id="green"></span>
+        <span class="box" id="blue"></span>
+        <span class="box" id="yellow"></span>
+        <input type="color">
+    </div>
+
+<script>
+    const boxes = document.querySelectorAll(".box")
+    const body = document.querySelector("body")
+    boxes.forEach((box)=>{
+        console.log(box);
+        box.addEventListener("click",(e)=>{
+            console.log(e.target.id);
+            body.style.backgroundColor = e.target.id
+        })
+    })
+
+    document.querySelector("input").addEventListener("change",(e)=>{
+        body.style.backgroundColor = e.target.value
+    })
+</script>
+</body>
+</html>
